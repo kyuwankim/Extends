@@ -15,4 +15,14 @@ public class Son extends Father{
 		process9();		// 자기자신 호출 
 		
 	}
+	
+	public void process9(int aaa){
+		
+	}
+	public void process9(String s){
+		
+	}
+	public void process9(int a, String b){
+		
+	}
 }
