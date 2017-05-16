@@ -11,6 +11,7 @@ public class PolyMain {
 		
 		System.out.println(son.getName());
 		System.out.println(son.getAge());
+		son.goSchool();
 		
 	}
 

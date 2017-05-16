@@ -130,12 +130,57 @@ public abstract class Fix {
 
 ## Exception
 
-프로그램을 만들어서 실행하다보면 가끔씩 프로그램이 강제종료 될 때가 있는데 이를 Error라고 하며, 이런 실행 시간 오류들 중에 JVM에서 유형을 분석할 수 있는 Error를 예외라고 합니다.
+> 프로그램을 만들어서 실행하다보면 가끔씩 프로그램이 강제종료 될 때가 있는데 이를 Error라고 하며, 이런 실행 시간 오류들 중에 JVM에서 유형을 분석할 수 있는 Error를 예외라고 합니다.
+
+####Try..Catch
+
+```java
+public class ExceptionMain {
+
+	public static void main(String[] args) {
+		
+		int array[] = new int[6];
+
+		// java.lang.ArrayIndexOutOfBoundsException 예
+		try {
+
+			array[0] = 5;
+			array[5] = 10;
+			// 에러가 발생하더라도 결과값을 리턴해야한다
+			//array[6] = 11;
+			
+			int x = 1/0;
+		} catch (ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
+		} catch (ArithmeticException e) {
+			e.printStackTrace();
+		}finally {
+			// Try-catch 를 통해 문제가 생겨도 일단은 진행을 시켜라
+			System.out.println("다섯번째값은 : " + array[5]);
+		}
+		System.out.print("시스템이 완료되었습니다");
+	}
+
+}
+```
 
 
 ## 다형성 
 
+> 다형성이란 하나의 메소드나 클래스가 있을 때 이것들이 다양한 방법으로 동작하는 것을 의미한다.
 
+상속관계에 있을때 
+상속받은 자식객체를 부모객체의 타입으로 대체할 수 있다 
 
+(내 타입을 부모타입으로 바꿀 수 있다)
 
+```java
+Son son = new Son(); 을
 
+Father son = new Son(); 로 가능하다 
+```
+
+이런식으로 선언을 하면 두 클래스에서 같은 이름의 메소드로 오버라이드가 됐을 때 
+
+Son의 Method를 호출한다 
+		

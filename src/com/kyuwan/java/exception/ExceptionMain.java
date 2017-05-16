@@ -12,10 +12,14 @@ public class ExceptionMain {
 			array[0] = 5;
 			array[5] = 10;
 			// 에러가 발생하더라도 결과값을 리턴해야한다
-			array[6] = 11;
+			//array[6] = 11;
+			
+			int x = 1/0;
 		} catch (ArrayIndexOutOfBoundsException e) {
 			e.printStackTrace();
-		} finally {
+		} catch (ArithmeticException e) {
+			e.printStackTrace();
+		}finally {
 			// Try-catch 를 통해 문제가 생겨도 일단은 진행을 시켜라
 			System.out.println("다섯번째값은 : " + array[5]);
 		}
