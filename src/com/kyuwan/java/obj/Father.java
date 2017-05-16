@@ -1,14 +1,26 @@
 package com.kyuwan.java.obj;
 
 public class Father {
-	String lastname;
-	String name;
+	public String lastname;
+	public String name;
 	
-	int age;
-	int money;
+	public int age;
+	public int money;
 	
-	String house;
-	String car;
-	String wife;
+	public String house;
+	public String car;
+	public String wife;
+	
+	public void process9(){
+		// 코드 9줄 
+	}
+	
+	public void goDesti(){
+
+		process9();
+		
+		System.out.println("9줄의 결과 출력");
+	
+	}
 	
 }
