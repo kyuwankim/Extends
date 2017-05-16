@@ -1,5 +1,5 @@
 package com.kyuwan.java.polymorphism;
 
-public class Son {
+public class Son extends Father{
 
 }
