@@ -88,6 +88,45 @@ Son 클래스를 생성해서 goDesti를 실행하면 "회사로 출근" 이라�
 ```
 
 
+## 추상클래스
+
+> 1. 인터페이스와 동일한데  
+> 2. 인터페이스 + 코드  (인터페이스에 코드를 추가할 수 있다) 
+> 로직이 추상화 될 수 있을때 Abstract 를 사용할 수 있다 
+
+
+```java
+public abstract class Fix {
+
+	public void process() {
+		disassemble();
+		for (int i = 0; i < 3; i++) {
+			replacePart();
+			clean();
+			assemble();
+		}
+	}
+
+	public abstract void disassemble();
+
+	public abstract void replacePart();
+
+	public abstract void clean();
+
+	public abstract void assemble();
+
+}
+```
+
+
+## Interface 
+
+> A Java interface is a bit like a class, except a Java interface can only contain method signatures and fields. An Java interface cannot contain an implementation of the methods, only the signature (name, parameters and exceptions) of the method.
+> 
+> 
+> 인터페이스는 일종의 추상클래스이다. 인터페이스는 추상클래스처럼 추상메서드를 갖지만 추상클래스보다 추상화 정도가 높아서 추상클래스와 달리 몸통을 갖춘 일반 메서드 또는 멤버변수를 구성원으로 가질 수 없다. 
+
+
 
 ## Exception 처리
 
